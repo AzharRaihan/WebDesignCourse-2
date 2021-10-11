@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    padding: 60px 0px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    width: 1120px;
+    margin: auto;
+    height: auto;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+p{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Josefin Sans', sans-serif;
+}
+a{
+    font-family: 'Josefin Sans', sans-serif;
+}
+li{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.primary{
+    color: #24DF9A;
+}
+.btn-primary{
+    background: #24DF9A;
+    padding: 10px 15px;
+    border-radius: 5px;
+    
+}
+
+
+
+
+
