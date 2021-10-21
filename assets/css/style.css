@@ -37,7 +37,7 @@
 }
 .banner-body{
     max-width: 285px;
-    height: 400px;
+    height: 500px;
     color: white;
     display: flex;
     justify-content: center;
@@ -58,8 +58,9 @@
     padding: 40px 20px;
     border: 1px solid rgb(211, 211, 211);
     border-radius: 5px;
-    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+
 }
+
 .exclusive-icon i{
     background-color: #f2f4fb;
     color: #362ec9;
@@ -72,12 +73,21 @@
     align-items: center;
     margin: auto;
 }
-.exclusive-icon i:hover{
+.card{
+    background-color: #ffffff;
+}
+.card:hover{
+    -webkit-box-shadow: 6px 2px 17px -11px #000000; 
+    box-shadow: 6px 2px 17px -11px #000000;
+}
+.card:hover h3{
+    color: #3852da;
+}
+.card:hover i{
     background-color: #3852da;
     color: white;
     transition: 0.5s;
 }
-
 /* Super Clean Css */
 .super-clean-wrap{
     display: flex;
@@ -159,4 +169,92 @@
     width: 150px;
     height: 165px;
 }
+
+
+/* Wtach Video */
+.wath-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to right top, #5a92e3, #5181dd, #4e6fd6, #515ccc, #5747c0);
+    color: white;
+    width: 910px;
+    height: 450px;
+    margin: auto;
+    border-radius: 5px;
+}
+.wath-video i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 45px;
+    background-color: #24e09b;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Pricing Card */
+.pricing-card-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.pricing-card{
+    width: 32%;
+    height: 500px;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    border: 1px solid #eef1fa;
+}
+.pricing-card:hover{
+    color: white;
+    background-image: linear-gradient(to right top, #5a92e3, #5181dd, #4e6fd6, #515ccc, #5747c0);
+
+}
+.pricing-card:hover li{
+    color: white;
+}
+.pricing-card img{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+.pricing-head{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    height: 150px;
+    padding-top: 50px;
+}
+
+.pricing-card h2{
+    width: 160px;
+    height: 55px;
+    padding-left: 20px;
+    display: flex;
+    color: white;
+    justify-content: left;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-image: linear-gradient(to right top, #ff6200, #ff7900, #ff8f00, #ffa300, #ffb600);
+}
+.pricing-body ul li{
+    list-style: none;
+    padding: 7px 0px;
+    text-align: center;
+    color: black;
+}
+
+.pricing-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
 

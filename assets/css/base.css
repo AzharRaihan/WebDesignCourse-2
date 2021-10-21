@@ -26,9 +26,12 @@ body{
 }
 p{
     font-family: 'Josefin Sans', sans-serif;
+    line-height: 25px;
+
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Josefin Sans', sans-serif;
+    line-height: 40px;
 }
 a{
     font-family: 'Josefin Sans', sans-serif;
@@ -37,8 +40,8 @@ li{
     font-family: 'Josefin Sans', sans-serif;
 }
 img{
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
 }
 .primary{
     color: #24DF9A;
