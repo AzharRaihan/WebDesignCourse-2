@@ -38,6 +38,7 @@ a{
 }
 li{
     font-family: 'Josefin Sans', sans-serif;
+    list-style-type: none;
 }
 img{
     /* width: 100%;
@@ -51,6 +52,17 @@ img{
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
+}
+.btn-getstarted{
+    background: #dcf9ee;
+    color: #102039;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.pricing-card:hover .btn-getstarted{
+    background-color: #24DF9A;
+    color: white;
 }
 .text-center{
     text-align: center;
