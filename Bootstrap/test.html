@@ -1,0 +1,42 @@
+fetch("https://ums-academic-service.seu.edu.bd/grade/api/v/1.0.0/get-student-own-grades",
+  {
+    headers: {
+      accept: "application/json",
+      "accept-language": "en-US,en;q=0.9",
+      authorization: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDIwMDAwMDEwMDY5IiwiY3JlYXRlZEF0Ijp7InllYXIiOjIwMjAsIm1vbnRoIjoiRkVCUlVBUlkiLCJkYXlPZk1vbnRoIjo2LCJkYXlPZldlZWsiOiJUSFVSU0RBWSIsImRheU9mWWVhciI6MzcsIm1vbnRoVmFsdWUiOjIsIm5hbm8iOjAsImhvdXIiOjExLCJtaW51dGUiOjIzLCJzZWNvbmQiOjUxLCJjaHJvbm9sb2d5Ijp7ImlkIjoiSVNPIiwiY2FsZW5kYXJUeXBlIjoiaXNvODYwMSJ9fSwidXBkYXRlZEF0Ijp7InllYXIiOjIwMjAsIm1vbnRoIjoiU0VQVEVNQkVSIiwiZGF5T2ZNb250aCI6MTIsImRheU9mV2VlayI6IlNBVFVSREFZIiwiZGF5T2ZZZWFyIjoyNTYsIm1vbnRoVmFsdWUiOjksIm5hbm8iOjUwNDAwMDAwMCwiaG91ciI6MTYsIm1pbnV0ZSI6Miwic2Vjb25kIjo0OSwiY2hyb25vbG9neSI6eyJpZCI6IklTTyIsImNhbGVuZGFyVHlwZSI6Imlzbzg2MDEifX0sImFjY291bnROb25FeHBpcmVkIjp0cnVlLCJhY2NvdW50Tm9uTG9ja2VkIjp0cnVlLCJjcmVkZW50aWFsc05vbkV4cGlyZWQiOnRydWUsImVuYWJsZWQiOnRydWUsImNoYW5nZVBhc3N3b3JkT25OZXh0TG9naW4iOmZhbHNlLCJ0eXBlIjoiU1RVREVOVCIsImFsbG93ZWRJcCI6IjEyNy4wLjAuMSIsImF1dGhvcml6YXRpb24iOlswLDEsMiwzLDQsNSw2LDcsOCw5LDEwLDExLDEyLDEzLDE0LDE1LDE2LDE3LDE4LDE5LDIwLDIxLDIyLDIzLDI0LDI1LDI2LDI3LDI4LDI5LDMwLDMxLDMyLDMzLDM0LDM1LDM2LDM3LDM4LDM5LDQwLDQxLDQyLDQzLDQ0LDQ1LDQ2LDQ3LDQ4LDQ5LDUwLDUxLDUyLDUzLDU0LDU1LDU2LDU3LDU4LDU5LDYwLDYxLDYyLDYzLDY0LDY1LDY2LDY3LDY4LDY5LDcwLDcxLDcyLDczLDc0LDc1LDc2LDc3XSwiaXNzIjoiYXV0aC1zZXJ2aWNlLXByb2R1Y3Rpb24iLCJpYXQiOjE2MzU3MDQ5MTAsImV4cCI6MTYzNTcxMDkxMX0.LsAxhcwFNkpW9zoPkhlIOc47Qdnil2ouOVpM1368vCiIuqLfpTmr-2AZCUKbC5HCsdZOuarWu6B6SSSkW2FAmQ",
+      "content-type": "application/json",
+      observe: "response",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-site",
+      "sec-gpc": "1",
+    },
+    referrer: "https://ums.seu.edu.bd/",
+    referrerPolicy: "strict-origin-when-cross-origin",
+    body: null,
+    method: "GET",
+    mode: "cors",
+    credentials: "include",
+  }
+)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(
+      "Name: ",
+      ${data.student.name.firstName} ${data.student.name.middleName} ${data.student.name.lastName}
+    );
+    console.log("CGPA (Attempted): ", data.cgpaAttempted);
+    console.log("CGPA (Completed): ", data.cgpaCompleted);
+    console.log("Credits (Attempted): ", data.creditsAttempted);
+    console.log("Credits (Completed): ", data.creditsCompleted);
+ 
+    let grades = data.gradeList.map((grade) => ({
+      Semester: grade.semester.label,
+      Code: grade.course.code,
+      Course: grade.course.title,
+      Point: grade.gradePoint,
+      Grade: grade.letterGrade,
+    }));
+ 
+    console.table(grades);
+  });

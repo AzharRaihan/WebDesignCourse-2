@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grid-wrap{
+            display: grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            grid-gap: 10px;
+            justify-content: center;
+        }
+        .grid-child{
+            background-color: #002B36;
+            color: white;
+            height: 250px;
+        }
+        @media only screen and (min-width: 575px) and (max-width: 767px) {
+            .grid-wrap{
+                grid-template-columns: 48% 48%;
+                
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="grid-wrap">
+                <div class="grid-child">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="grid-child">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae similique impedit eum ex eos? Cumque nulla qui ipsam voluptate quisquam alias aliquid ullam et optio, iste ad eius repellendus. Commodi?</p>
+                </div>
+                <div class="grid-child">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="grid-child">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
